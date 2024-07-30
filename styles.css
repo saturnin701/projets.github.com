@@ -1,0 +1,269 @@
+body {
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+#logo {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fcb69f;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px 20px; /* Padding top to account for fixed header */
+    text-align: center;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+    color: #fcb69f;
+}
+
+p, form {
+    font-size: 1.2em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+label, input, select, textarea, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #fcb69f;
+}
+
+button {
+    background-color: #fcb69f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff8b60;
+    transform: scale(1.05);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery a {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery a:hover {
+    transform: scale(1.05);
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Styles pour le pied de page */
+footer {
+    background-color: rgba(246, 243, 243, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    width: 100%;s
+    animation: fadeInUp 1s ease-in-out;
+}
+
+footer .contact {
+    margin-bottom: 10px;
+}
+
+footer .contact p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+footer .contact input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    animation: slideInRight 1s ease-in-out;
+}
+
+footer .contact button {
+    background-color: #fcb69f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: slideInUp 1s ease-in-out;
+}
+
+footer .contact button:hover {
+    background-color: #ff8b60;
+    transform: scale(1.05);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
